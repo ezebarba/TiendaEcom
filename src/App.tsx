@@ -1,21 +1,21 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Landing from './pages/Landing';
-import Contact from './pages/Contact';
-import Shop from './pages/Shop';
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
-import config from './config.json';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import CartPage from "./pages/CartPage";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import "./index.css";
 
 function App() {
   return (
     <Router>
-      <div className={`template-${config.template}`}>
+      <div className="flex flex-col min-h-screen">
         <Navbar />
-        <Routes>
-          <Route path="/" element={<Landing />} />
-          <Route path="/tienda" element={<Shop />} />
-          <Route path="/contacto" element={<Contact />} />
-        </Routes>
+        <main className="flex-grow">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/carrito" element={<CartPage />} />
+          </Routes>
+        </main>
         <Footer />
       </div>
     </Router>
