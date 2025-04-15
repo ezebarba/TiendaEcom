@@ -1,7 +1,8 @@
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
+import { HiOutlineShoppingCart } from "react-icons/hi";
 import { useCartStore } from "../stores/cartStore";
 
-const Navbar = () => {
+const Navbar = ({ toggleCartDrawer }) => {
   const cart = useCartStore((state) => state.cart);
   const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
 
@@ -11,17 +12,14 @@ const Navbar = () => {
         TiendaEcom
       </Link>
       <div className="flex gap-6 items-center">
-        <Link to="/" className="hover:underline">
-          Inicio
-        </Link>
-        <Link to="/carrito" className="hover:underline relative">
-          Carrito
+        <button onClick={toggleCartDrawer} className="relative hover:text-gray-300">
+          <HiOutlineShoppingCart className="h-6 w-6 text-white" />
           {totalItems > 0 && (
-            <span className="ml-1 bg-red-500 text-white text-xs rounded-full px-2 py-0.5">
+            <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full px-2 py-0.5">
               {totalItems}
             </span>
           )}
-        </Link>
+        </button>
       </div>
     </nav>
   );

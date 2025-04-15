@@ -1,3 +1,4 @@
+// src/components/ProductList.tsx
 import { useCartStore } from "../stores/cartStore";
 
 const sampleProducts = [
@@ -5,19 +6,19 @@ const sampleProducts = [
     id: 1,
     name: "Auriculares Bluetooth",
     price: 12000,
-    image: "https://via.placeholder.com/150"
+    image: "https://placehold.co/150x150"
   },
   {
     id: 2,
     name: "Mouse Inalámbrico",
     price: 8500,
-    image: "https://via.placeholder.com/150"
+    image: "https://placehold.co/150x150"
   },
   {
     id: 3,
     name: "Teclado Mecánico",
     price: 21500,
-    image: "https://via.placeholder.com/150"
+    image: "https://placehold.co/150x150"
   }
 ];
 
