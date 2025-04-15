@@ -1,0 +1,15 @@
+/* Template Minimalista */
+.minimalista {
+    @apply bg-white text-black;
+  }
+  
+  /* Template Boutique */
+  .boutique {
+    @apply bg-pink-100 text-gray-700;
+  }
+  
+  /* Template Clásico */
+  .clasico {
+    @apply bg-gray-200 text-black;
+  }
+  
